@@ -30,14 +30,28 @@ public class Application1 {
          * */
         Scanner sc = new Scanner(System.in);
         System.out.println("문자열을 입력하시오. : ");
+
         String words = sc.nextLine();
         System.out.println("자연수를 입력하시오. : ");
+
         int n = sc.nextInt();
         String result = "";
+
+        while(n>26){
+            n=n-26;
+        }
+
         for(int i = 0; i < words.length(); i++) {
+
             if(words.charAt(i)<123 && words.charAt(i)>64) {
+                // 소문자 z랑 대문자 z 예외처리를 해야한다.
                 int x = words.charAt(i) + n;
-                result = result + (char)x + " ";
+                result = result + (char)x;
+
+            }else {
+
+                result = result + words.charAt(i);
+
             }
         }
         System.out.println(result);

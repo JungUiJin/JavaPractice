@@ -27,20 +27,27 @@ public class Application2 {
          * 거스름돈 : 77660원
          * */
         Scanner sc = new Scanner(System.in);
+
         System.out.println("받으신 금액을 입력하세요: ");
         int money = sc.nextInt();
+
         System.out.println("상품가격을 입력하세요: ");
         int price = sc.nextInt();
+
         System.out.println("==============");
+
         int count = 0;
 
         int change = money - price;
 
         // 5만원 지폐 세기
+        // 이것도 %랑 /를 쓰면 더 편하다.
         while(change>=50000){
             count ++;
             change -= 50000;
         }
+        // int c5 = change/50000
+        // int 남은값 = change%50000
         System.out.println("* 50000원권 지폐 "+count+"장");
         count = 0;
         // 만원 지폐 세기
