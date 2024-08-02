@@ -65,7 +65,7 @@ public class Application2 {
         Scanner sc = new Scanner(System.in);
 
         // 정답 4자리 각각 문자로 저장할 배열 선언
-        char[] answer;
+
         // answer[]를 int형으로 변환하여 저장할 배열 선언
         int[] answerArr = new int[4];
         //구분선
@@ -76,13 +76,19 @@ public class Application2 {
             System.out.println("============");
             System.out.println("남은 기회 : " + count);
             System.out.println("4자리 숫자를 입력하시오.");
-            answer = sc.nextLine().toCharArray();
-
+            char[] answer = sc.nextLine().toCharArray();
+            // 4자리 이하 or 이상인지 확인.
+            if(answer.length != 4){
+                System.out.println("4자리 수를 입력하시오.");
+                if(i!=0) { i--; } // 재 반복을 위한 i--
+                continue;
+            }
+            // 입력받은 숫자에 중복값 있는지 확인. ex) 1123
             for (int j = 0; j < 4; j++) {
                 for(int k = 0; k < 4; k++) {
                     if (answer[j] == answer[k] && j!=k) {
                         System.out.println("정수 4자리중 중복값이 없어야 합니다.");
-                        if(i!=0) { i--; }
+                        if(i!=0) { i--; } // 재 반복을 위한 i--
                         continue duplicateNum;
                     }
                 }
@@ -102,7 +108,7 @@ public class Application2 {
                     }
                 }
             }
-
+            // 4S : 정답
             if(sNum==4){
                 System.out.println("정답입니다!");
                 return;
@@ -114,6 +120,7 @@ public class Application2 {
                 bNum = 0;
             }
         }
+        // 기회 다씀.
         System.out.println("실패!!!!!!");
     }
 }
