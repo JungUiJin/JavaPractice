@@ -39,6 +39,7 @@ public class Application {
 
         for(StudentDTO student : students){
             if(student != null) student.getInformation();
+            else break;
         }
 
     }
