@@ -52,9 +52,11 @@ public class Application2 {
                 }
             }
         }
+        //  정답 확인용
         for (int i = 0; i < 4; i++) {
             System.out.print(nums[i] + " ");
         }
+
         System.out.println();
         // 스트라이크, 볼 개수 저장할 변수 생성
         int sNum = 0;

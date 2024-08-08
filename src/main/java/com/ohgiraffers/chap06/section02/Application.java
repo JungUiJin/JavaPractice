@@ -38,7 +38,7 @@ public class Application {
         }
 
         for(StudentDTO student : students){
-            if(student != null) student.getInformation();
+            if(student != null) System.out.println(student.getInformation());
             else break;
         }
 

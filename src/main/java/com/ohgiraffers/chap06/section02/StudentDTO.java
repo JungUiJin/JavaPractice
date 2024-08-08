@@ -19,13 +19,7 @@ public class StudentDTO {
         this.math = math;
     }
 
-    public void getInformation(){
-        System.out.print("Grade : " + grade +" | ");
-        System.out.print("Classroom : " + classroom+" | ");
-        System.out.print("Name : " + name+" | ");
-        System.out.print("Kor : " + kor+" | ");
-        System.out.print("Eng : " + eng+" | ");
-        System.out.print("Math : " + math+" |");
-        System.out.println("Average : "+(kor+eng+math)/3);
+    public String getInformation(){
+        return ("Grade : " + grade +" | "+"Classroom : " + classroom+" | "+"Name : " + name+" | "+"Kor : " + kor+" | "+"Eng : " + eng+" | "+"Math : " + math+" | "+"Average : "+(kor+eng+math)/3);
     }
 }
