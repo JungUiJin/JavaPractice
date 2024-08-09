@@ -8,13 +8,17 @@ import java.util.Scanner;
 public class Application {
     public static void main(String[] args) throws CantDivideException {
         try{
+
             Scanner sc = new Scanner(System.in);
             System.out.print("분자 입력 : ");
             int num1 = sc.nextInt();
+
             System.out.print("분모 입력 : ");
             int num2 = sc.nextInt();
+
             if(num2==0) throw new CantDivideException();
             System.out.println("결과 : " + (num1/num2));
+
         }catch (InputMismatchException e){
             System.out.println("정수를 입력하셔야 합니다.");
         }catch (CantDivideException e){
