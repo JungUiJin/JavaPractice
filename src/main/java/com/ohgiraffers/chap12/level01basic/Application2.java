@@ -11,6 +11,7 @@ public class Application2 {
         String[] strArray = {"A", "B", "C"};
 //         System.out.println("String 합계 : " + sum(strArray));  // 컴파일 에러 발생
     }
+
     public static <T extends Number> double sum(T[] array) {
         double sumNum = array[0].doubleValue();
         for(int i = 1; i < array.length; i++) {
@@ -18,4 +19,5 @@ public class Application2 {
         }
         return sumNum;
     }
+
 }
